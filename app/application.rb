@@ -29,7 +29,7 @@
         resp.write "Your cart is empty"
       end
     elsif req.path.match(/add/)
-      item_to_add = req.GET["item"]
+      add_item = req.GET["item"]
         if @@items.include?(item_to_add)
              @@cart << item_to_add
             resp.write "added #{item_to_add}"        
